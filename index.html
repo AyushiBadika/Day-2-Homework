@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React with CDN Link</title>
+  </head>
+  <style>
+    body {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+    }
+    div {
+      width: 60%;
+    }
+  </style>
+  <body>
+    <div></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"
+      crossorigin
+    ></script>
+    <script type="text/babel">
+      function Content() {
+        return (
+          <>
+            <h1>Topics Covered</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              beatae cum
+            </p>
+
+            <a href="#">Getting Started with the web</a>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+            </p>
+            <a href="#">HTML - Structuring the web</a>
+            <p>
+              officiis maiores quo rerum aperiam harum fugit! Provident culpa
+              debitis accusantium cumque?
+            </p>
+            <a href="#">CSS - Styling the web</a>
+            <p>
+              adipisicing elit. Similique saepe aliquid quos nihil impedit quas,
+              culpa autem totam ea atque architecto iure quibusdam aut
+              blanditiis nisi, ex minus inventore aperiam. sed distinctio eius.
+              Fugit?
+            </p>
+          </>
+        );
+      }
+      const container = document.querySelector("div");
+      ReactDOM.render(<Content />, container);
+    </script>
+  </body>
+</html>
